@@ -1,0 +1,110 @@
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+
+.App {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageCard {
+  width: 250px;
+  height: 150px;
+  border: 2px solid black;
+  border-radius: 12px;
+  margin: 30px 30px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageCard > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.images-grid {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navButton {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  background: #d6d6e7;
+  padding: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 5px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.navButton:hover,
+.navButton:focus,
+.navButton:active {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
+  scale: 1.05;
+}
+
+.modal {
+  position: absolute;
+  top: 40%;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  background-color: aliceblue;
+  width: 300px;
+  height: 240px;
+  border-radius: 10px;
+}
+
+.image {
+  top: 30%;
+  text-align: left;
+  width: 300px;
+  height: 420px;
+}
+
+.close-button {
+  display: flex;
+  background-color: transparent;
+  border: 0px;
+}
+
+.modal-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons {
+  padding: 1% 2%;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+
+.images {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
