@@ -1,8 +1,15 @@
 import axios from "axios";
 import { imageStore } from "../Redux/ImagesState";
 
+
+
 async function get9Images(category, page, filterOrder) {
-  const address = `https://galvitrak-msapps-homeassignment-server.onrender.com/api/images/${category}/${page}/${filterOrder}`; // setting the address to the api hosted on Render
+  let address;
+  if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') { // checking environment
+    address = `http://localhost:3001/api/images/${category}/${page}/${filterOrder}`; // setting the address to the local dev environment api
+  } else {
+    address = `https://galvitrak-msapps-homeassignment-server.onrender.com/api/images/${category}/${page}/${filterOrder}`; // setting the address to the api hosted on Render
+  }
   const response = await axios.get(address); // getting the images from server side
   imageStore.dispatch({
     // storing images in redux store
